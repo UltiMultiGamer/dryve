@@ -237,13 +237,13 @@
 
 <style>
 	.filters {
-		padding: var(--space-4);
+		padding: var(--space-3);
 		display: grid;
-		gap: var(--space-3);
+		gap: var(--space-2);
 		position: sticky;
-		top: calc(var(--space-6) + var(--space-3));
+		top: calc(var(--space-5) + var(--space-2));
 		align-self: start;
-		max-height: calc(100vh - var(--space-6) - var(--space-3) - var(--space-4));
+		max-height: fit-content;
 		overflow-y: auto;
 	}
 
@@ -297,7 +297,6 @@
 		border-radius: 999px;
 		border: 2px solid var(--accent-strong);
 		background: #fff;
-		box-shadow: 0 0 0 2px color-mix(in oklab, var(--accent-soft) 60%, transparent 40%);
 		cursor: grab;
 	}
 

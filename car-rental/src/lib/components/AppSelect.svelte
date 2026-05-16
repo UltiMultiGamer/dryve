@@ -174,7 +174,6 @@
 		padding: var(--space-1);
 		max-height: 280px;
 		overflow: auto;
-		box-shadow: 0 12px 24px rgba(23, 51, 39, 0.12);
 		animation: dropdown-enter var(--motion-base) var(--easing-standard);
 	}
 
@@ -226,11 +225,9 @@
 	@keyframes dropdown-enter {
 		from {
 			opacity: 0;
-			transform: translateY(-4px);
 		}
 		to {
 			opacity: 1;
-			transform: translateY(0);
 		}
 	}
 </style>

@@ -405,15 +405,15 @@
 		transition:
 			border-color var(--motion-base) var(--easing-standard),
 			background-color var(--motion-base) var(--easing-standard),
-			transform var(--motion-base) var(--easing-standard);
+			outline-color var(--motion-base) var(--easing-standard);
 	}
 
 	.tier-option:hover,
 	.tier-option:focus-visible {
 		border-color: var(--accent-strong);
 		background: color-mix(in oklab, var(--accent-soft) 26%, var(--bg-surface));
-		transform: translateY(-1px);
-		outline: none;
+		outline: 2px solid color-mix(in oklab, var(--accent-strong) 26%, transparent);
+		outline-offset: 1px;
 	}
 
 	.tier-option-top {
@@ -444,7 +444,8 @@
 	.tier-option.active-tier {
 		border-color: var(--accent-strong);
 		background: color-mix(in oklab, var(--accent-soft) 42%, var(--bg-surface));
-		box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent-strong) 28%, transparent);
+		outline: 1px solid color-mix(in oklab, var(--accent-strong) 28%, transparent);
+		outline-offset: -1px;
 	}
 
 	.bookings-head h2 {

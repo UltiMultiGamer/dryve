@@ -200,7 +200,6 @@
 
 	.favorite-btn i {
 		line-height: 1;
-		transform: translateY(0.5px);
 	}
 
 	.content {

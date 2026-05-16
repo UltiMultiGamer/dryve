@@ -154,7 +154,6 @@
 		overflow: hidden;
 		min-height: 480px;
 		border-radius: var(--radius-lg);
-		box-shadow: var(--shadow-lg);
 	}
 
 	.hero-content {
@@ -230,17 +229,15 @@
 		text-decoration: none;
 		color: inherit;
 		border: var(--border-light);
-		box-shadow: var(--shadow-sm);
 		transition:
-			transform var(--motion-base) var(--easing-standard),
 			border-color var(--motion-base) var(--easing-standard),
-			box-shadow var(--motion-base) var(--easing-standard);
+			outline-color var(--motion-base) var(--easing-standard);
 	}
 
 	.deal-card:hover {
-		transform: translateY(-4px);
 		border-color: var(--accent);
-		box-shadow: var(--shadow-lg);
+		outline: 2px solid color-mix(in oklab, var(--accent) 25%, transparent);
+		outline-offset: 1px;
 	}
 
 	.deal-media {
@@ -315,17 +312,15 @@
 		background: color-mix(in oklab, var(--tier-fill) 10%, var(--bg-surface));
 		position: relative;
 		overflow: hidden;
-		box-shadow: var(--shadow-md);
 		transition:
-			transform var(--motion-base) var(--easing-standard),
 			border-color var(--motion-base) var(--easing-standard),
-			box-shadow var(--motion-base) var(--easing-standard);
+			outline-color var(--motion-base) var(--easing-standard);
 	}
 
 	.tier-card:hover {
-		transform: translateY(-4px);
 		border-color: color-mix(in oklab, var(--tier-color) 58%, var(--line-color));
-		box-shadow: var(--shadow-lg);
+		outline: 2px solid color-mix(in oklab, var(--tier-color) 25%, transparent);
+		outline-offset: 1px;
 	}
 
 	.tier-top {
@@ -521,9 +516,5 @@
 			opacity: 1;
 		}
 
-		.tier-card,
-		.tier-card:hover {
-			transform: none;
-		}
 	}
 </style>

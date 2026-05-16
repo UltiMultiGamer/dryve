@@ -128,7 +128,6 @@
 		border-bottom: var(--border-light);
 		background: rgba(255, 255, 255, 0.8);
 		backdrop-filter: blur(16px);
-		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
 		transition: background var(--motion-base) var(--easing-standard);
 	}
 
@@ -315,11 +314,9 @@
 	@keyframes account-enter {
 		from {
 			opacity: 0;
-			transform: translateY(-4px);
 		}
 		to {
 			opacity: 1;
-			transform: translateY(0);
 		}
 	}
 </style>

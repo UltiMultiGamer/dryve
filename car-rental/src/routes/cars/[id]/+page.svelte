@@ -408,9 +408,9 @@
 <style>
 	.detail-layout {
 		display: grid;
-		grid-template-columns: minmax(0, 1.42fr) minmax(0, 1fr);
-		gap: clamp(var(--space-3), 2.5vw, var(--space-5));
-		padding: clamp(var(--space-2), 2vw, var(--space-4)) clamp(var(--space-2), 3vw, var(--space-6));
+		grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+		gap: clamp(var(--space-4), 2.7vw, var(--space-6));
+		padding: clamp(var(--space-2), 1.8vw, var(--space-3)) clamp(var(--space-2), 2.2vw, var(--space-5));
 		max-width: min(1420px, 96vw);
 		margin-inline: auto;
 	}
@@ -470,13 +470,16 @@
 		cursor: pointer;
 		transition:
 			background var(--motion-base) var(--easing-standard),
-			transform var(--motion-base) var(--easing-standard);
+			border-color var(--motion-base) var(--easing-standard),
+			outline-color var(--motion-base) var(--easing-standard);
 	}
 
 	.hero-nav:hover,
 	.hero-zoom:hover {
 		background: var(--bg-surface);
-		transform: scale(1.03);
+		border-color: var(--hover-outline);
+		outline: 2px solid color-mix(in oklab, var(--text-primary) 18%, transparent);
+		outline-offset: 1px;
 	}
 
 	.hero-nav {
@@ -567,7 +570,7 @@
 	.hero-price {
 		display: grid;
 		gap: 0.15rem;
-		margin: 0 0 1.45rem;
+		margin: 0 0 1rem;
 	}
 
 	.hero-price-line {
@@ -624,6 +627,7 @@
 		gap: 0;
 		align-items: stretch;
 		min-width: 0;
+		padding-left: clamp(0.2rem, 1vw, 0.7rem);
 	}
 
 	.detail-meta {
@@ -664,10 +668,10 @@
 
 	.detail-title {
 		margin: 0 0 0.75rem;
-		font-size: clamp(1.55rem, 3.4vw, 2.15rem);
+		font-size: clamp(1.4rem, 2.7vw, 1.95rem);
 		line-height: 1.12;
-		font-family: var(--font-body);
-		font-weight: 700;
+		font-family: var(--font-heading);
+		font-weight: 600;
 	}
 
 	.description {
@@ -805,12 +809,10 @@
 	.color-swatch i {
 		font-size: 1rem;
 		line-height: 1;
-		filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
 	}
 
 	.color-swatch.active i {
 		color: #1aa357;
-		filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.32));
 	}
 
 	.booking-actions {
@@ -891,6 +893,9 @@
 
 	.lightbox-close:hover {
 		background: var(--bg-surface);
+		border-color: var(--hover-outline);
+		outline: 2px solid color-mix(in oklab, var(--text-primary) 18%, transparent);
+		outline-offset: 1px;
 	}
 
 	.lightbox-nav {
@@ -912,6 +917,9 @@
 
 	.lightbox-nav:hover {
 		background: var(--bg-surface);
+		border-color: var(--hover-outline);
+		outline: 2px solid color-mix(in oklab, var(--text-primary) 18%, transparent);
+		outline-offset: 1px;
 	}
 
 	.lightbox-nav--prev {
@@ -1017,6 +1025,10 @@
 	@media (max-width: 1080px) {
 		.detail-layout {
 			grid-template-columns: 1fr;
+		}
+
+		.info-col {
+			padding-left: 0;
 		}
 
 		.stats-row {

@@ -113,7 +113,6 @@
 		padding: var(--space-3);
 		border-radius: var(--radius-md);
 		min-width: 304px;
-		box-shadow: 0 14px 28px rgba(23, 51, 39, 0.14);
 	}
 
 	:global(.calendar-root [data-calendar-header]) {

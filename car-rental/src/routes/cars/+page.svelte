@@ -21,9 +21,9 @@
 	});
 </script>
 
-<section>
+<section class="catalog-page">
 	<span class="eyebrow">Dryve / Каталог</span>
-	<h1 class="section-title">Автомобили для аренды</h1>
+	<h1 class="section-title catalog-title">Автомобили для аренды</h1>
 
 	<div class="catalog-layout">
 		<aside>
@@ -52,9 +52,20 @@
 </section>
 
 <style>
+	.catalog-page {
+		display: grid;
+		gap: var(--space-3);
+	}
+
+	.catalog-title {
+		margin-bottom: var(--space-2);
+		font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+		line-height: 1.08;
+	}
+
 	.catalog-layout {
 		display: grid;
-		gap: var(--space-4);
+		gap: var(--space-3);
 		grid-template-columns: 280px minmax(0, 1fr);
 		align-items: start;
 	}
@@ -65,7 +76,7 @@
 
 	.toolbar {
 		padding: var(--space-3) var(--space-4);
-		margin-bottom: var(--space-4);
+		margin-bottom: var(--space-3);
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -87,8 +98,14 @@
 	}
 
 	.card-grid {
-		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-		gap: var(--space-5);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: var(--space-4);
+	}
+
+	@media (max-width: 760px) {
+		.card-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	@media (max-width: 980px) {
